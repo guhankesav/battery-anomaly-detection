@@ -83,8 +83,10 @@ which is why the overall rate is 57%.
 | Cold only (−5 to 5 °C) | 5.0 | 94% | 97% |
 | End of life (80–100% of cycle life) | 1.7 | 99% | 97% |
 
-**Cost:** 2.6 µs per 96-cell sample on an Apple M-series laptop (27 ns per cell). State is 24 KB at
-the 128-cell maximum, all static.
+**Cost:** 2.6 µs per 96-cell sample on an Apple M-series laptop (27 ns per cell). Built for a
+Cortex-M4F with `-Os` in CI, the detector (`cm_step`, `cm_init`, selection, defaults) is **2.9 KB of
+code**, and its state is 24 KB of RAM at the 128-cell maximum, all static. (`cm_run_ex`, the
+whole-recording harness for Python, adds its own static copy of that state.)
 
 ## What did not work, and what changed
 
