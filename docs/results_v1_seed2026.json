@@ -1,0 +1,204 @@
+{
+  "seed": 2026,
+  "tuned_on_seed": 100,
+  "detector_state_bytes_128_cells": 24312,
+  "test_fleet": {
+    "normal": {
+      "packs": 1000,
+      "pack_hours": 2000.0,
+      "packs_with_false_alarm": 9,
+      "false_alarms_per_1000_pack_hours": 4.5
+    },
+    "isc": {
+      "packs": 200,
+      "detected": 0.925,
+      "right_type": 0.905,
+      "other_cells_flagged": 0.005,
+      "median_delay_min": 8.866666666666667
+    },
+    "high_resistance": {
+      "packs": 200,
+      "detected": 0.615,
+      "right_type": 0.61,
+      "other_cells_flagged": 0.01,
+      "median_delay_min": 14.95
+    },
+    "thermal": {
+      "packs": 200,
+      "detected": 0.97,
+      "right_type": 0.97,
+      "other_cells_flagged": 0.005,
+      "median_delay_min": 7.691666666666666
+    },
+    "sensor_stuck": {
+      "packs": 100,
+      "detected": 1.0,
+      "right_type": 1.0,
+      "other_cells_flagged": 0.01,
+      "median_delay_min": 2.0
+    },
+    "sensor_spike": {
+      "packs": 100,
+      "detected": 1.0,
+      "right_type": 1.0,
+      "other_cells_flagged": 0.0,
+      "median_delay_min": 4.066666666666666
+    },
+    "sensor_drift": {
+      "packs": 100,
+      "detected": 1.0,
+      "right_type": 1.0,
+      "other_cells_flagged": 0.01,
+      "median_delay_min": 26.34166666666667
+    }
+  },
+  "severity": {
+    "isc": {
+      "quantity": "short resistance (ohm)",
+      "severity_for_50pct_detection": 336.69508879768733,
+      "severity_for_90pct_detection": 147.94368641940258,
+      "more_severe_is": "lower",
+      "range_simulated": [
+        10.177892751991285,
+        299.298811881337
+      ]
+    },
+    "high_resistance": {
+      "quantity": "extra resistance (ohm)",
+      "severity_for_50pct_detection": 0.035246716924975906,
+      "severity_for_90pct_detection": 0.0916045455667311,
+      "more_severe_is": "higher",
+      "range_simulated": [
+        0.020136014359861325,
+        0.07988693654980787
+      ]
+    },
+    "thermal": {
+      "quantity": "extra heat (W)",
+      "severity_for_50pct_detection": 0.06185216092783402,
+      "severity_for_90pct_detection": 0.14610920340099015,
+      "more_severe_is": "higher",
+      "range_simulated": [
+        0.10163708785661255,
+        0.5970071156223797
+      ]
+    }
+  },
+  "test_fleet_seconds": 99.6,
+  "stress": {
+    "baseline": {
+      "normal": {
+        "packs": 300,
+        "pack_hours": 600.0,
+        "packs_with_false_alarm": 3,
+        "false_alarms_per_1000_pack_hours": 5.0
+      },
+      "isc": {
+        "packs": 100,
+        "detected": 0.94,
+        "right_type": 0.94,
+        "other_cells_flagged": 0.01,
+        "median_delay_min": 9.141666666666666
+      },
+      "thermal": {
+        "packs": 100,
+        "detected": 0.96,
+        "right_type": 0.96,
+        "other_cells_flagged": 0.02,
+        "median_delay_min": 7.366666666666667
+      }
+    },
+    "sensor_noise_x2": {
+      "normal": {
+        "packs": 300,
+        "pack_hours": 600.0,
+        "packs_with_false_alarm": 4,
+        "false_alarms_per_1000_pack_hours": 6.666666666666667
+      },
+      "isc": {
+        "packs": 100,
+        "detected": 0.86,
+        "right_type": 0.84,
+        "other_cells_flagged": 0.01,
+        "median_delay_min": 9.725000000000001
+      },
+      "thermal": {
+        "packs": 100,
+        "detected": 0.96,
+        "right_type": 0.96,
+        "other_cells_flagged": 0.02,
+        "median_delay_min": 8.383333333333333
+      }
+    },
+    "manufacturing_spread_x2": {
+      "normal": {
+        "packs": 300,
+        "pack_hours": 600.0,
+        "packs_with_false_alarm": 224,
+        "false_alarms_per_1000_pack_hours": 373.3333333333333
+      },
+      "isc": {
+        "packs": 100,
+        "detected": 0.95,
+        "right_type": 0.94,
+        "other_cells_flagged": 0.75,
+        "median_delay_min": 9.916666666666666
+      },
+      "thermal": {
+        "packs": 100,
+        "detected": 0.96,
+        "right_type": 0.96,
+        "other_cells_flagged": 0.78,
+        "median_delay_min": 7.333333333333334
+      }
+    },
+    "cold_-5_to_5C": {
+      "normal": {
+        "packs": 300,
+        "pack_hours": 600.0,
+        "packs_with_false_alarm": 2,
+        "false_alarms_per_1000_pack_hours": 3.3333333333333335
+      },
+      "isc": {
+        "packs": 100,
+        "detected": 0.94,
+        "right_type": 0.94,
+        "other_cells_flagged": 0.0,
+        "median_delay_min": 10.341666666666667
+      },
+      "thermal": {
+        "packs": 100,
+        "detected": 0.93,
+        "right_type": 0.93,
+        "other_cells_flagged": 0.0,
+        "median_delay_min": 7.733333333333333
+      }
+    },
+    "end_of_life_80_100pct": {
+      "normal": {
+        "packs": 300,
+        "pack_hours": 600.0,
+        "packs_with_false_alarm": 6,
+        "false_alarms_per_1000_pack_hours": 10.0
+      },
+      "isc": {
+        "packs": 100,
+        "detected": 0.94,
+        "right_type": 0.91,
+        "other_cells_flagged": 0.01,
+        "median_delay_min": 9.791666666666666
+      },
+      "thermal": {
+        "packs": 100,
+        "detected": 0.96,
+        "right_type": 0.96,
+        "other_cells_flagged": 0.03,
+        "median_delay_min": 7.333333333333333
+      }
+    }
+  },
+  "host_cost": {
+    "microseconds_per_pack_step_96_cells": 2.26,
+    "nanoseconds_per_cell_step": 23.6
+  }
+}

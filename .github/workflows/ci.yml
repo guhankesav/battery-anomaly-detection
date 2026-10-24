@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests
+        run: make test
+      - name: Unit tests under AddressSanitizer and UndefinedBehaviorSanitizer
+        run: make test-sanitize
+      - name: Cortex-M4F build and footprint
+        run: sudo apt-get install -y -qq gcc-arm-none-eabi && make arm
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: make build/libcellmon.so
+      - name: Simulator and detector tests (C library through ctypes)
+        run: python -m pytest
